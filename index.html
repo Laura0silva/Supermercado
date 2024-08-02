@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Supermercado Barbie</title>
+        <link rel="stylesheet" type="text/css" href="estilo.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Supermercado da Barbie 🦩🌸</h1>
+            <h3 style="text-shadow: 0 0 3px #ffffff, 0 0 5px #ffffff;">Levando qualquer um dos produtos abaixo, você ganha 50% de desconto no 1º item <br /> (na compra de 3 produtos iguais).</h3>
+        </header>
+        <div class="div">
+            <table style="size: 100%; margin-top: 2%;">
+                <tr>
+                    <td>
+                    <img src="imagens/pastaDental.png" alt="Pasta Dental">
+                    <p>Pasta Dental - Impede a formação de bactérias e <br />cáries e te deixa com bom hálito!</p>
+                    <p>R$: <input id="pasta" type="number" /></p><br />
+                    <p >
+                        Leve 3 por: <span id="promPasta"></span>
+                    </p>
+                    </td>
+
+                    <td>
+                    <img style="margin-left: 20%;" src="imagens/escovaDental.png" alt="Escova Dental">
+                    <p style="padding-left: 30px; padding-right: 30px;">Escova de dente - Essencial para uma boa saúde bocal e dentes limpos! Lembre-se de escova-los sempre depois e comer.</p>
+                    <p>R$: <input style="margin-left: 25px;" id="escova" type="number" /></p><br />
+                    <p >
+                        Leve 3 por: <span id="promEscova"></span>
+                        <br />
+                    </p>
+                    </td>
+
+                    <td>
+                    <img src="imagens/sabonete.png" alt="Sabonete">
+                    <p>Sabonete - Limpa sem deixar a pele ressecada!</p><br />
+                    <p>R$: <input id="sabonete" type="number" /></p><br />
+                    <p >
+                        Leve 3 por: <span id="promSabonete"></span>
+                        <br />
+                    </p>
+                    </td>
+                </tr>
+            </table>
+            <br /> <br />
+            <button style="margin-left: 45%; width: 160px; " onclick="calcular()">Calcular Promoção</button>
+            <table></table>
+        </div>
+        <footer>
+            <h3 style="margin-top: 60px; background-color: rgba(211, 132, 175, 0.61); padding: 15px; color: white; width: 70%; margin-left: 15%;">Últimos produtos disponíveis para compra! Não perca essa change 💕💖✨</h3>
+        </footer>
+
+        <script>
+            var Pasta = document.querySelector('#pasta')
+            var Escova = document.querySelector('#escova')
+            var Sabonete = document.querySelector('#sabonete')
+            var PromPasta = document.querySelector('#promPasta')
+            var PromEscova = document.querySelector('#promEscova')
+            var PromSabonete = document.querySelector('#promSabonete')
+    
+            function calcular(){
+                PromPasta.innerHTML = parseInt(Pasta.value) * 2.5
+                PromEscova.innerHTML = parseInt(Escova.value) * 2.5 
+                PromSabonete.innerHTML = parseInt(Sabonete.value) * 2.5
+            }
+        </script>
+    
+    </body>
+</html>
